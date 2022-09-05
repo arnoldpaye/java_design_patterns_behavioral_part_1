@@ -2,7 +2,15 @@ package chain_of_responsibility_exercise;
 
 public abstract class AuthenticationHandler {
 
-  public void handleRequest(String requestType) {
+  private AuthenticationHandler next;
+
+  public AuthenticationHandler(AuthenticationHandler next) {
+    this.next = next;
   }
 
+  public void handleRequest(String requestType) {
+    if (next != null) {
+      next.handleRequest(requestType);
+    }
+  }
 }
