@@ -7,6 +7,7 @@ public class Button {
     this.text = text;
   }
 
-  public void click() {
+  public void click(Command command) {
+    command.execute();
   }
 }

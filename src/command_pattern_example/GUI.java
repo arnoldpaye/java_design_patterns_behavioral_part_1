@@ -7,7 +7,7 @@ public class GUI {
     Button saveButton = new Button("Save");
     Button printButton = new Button("Print");
 
-    saveButton.click();
-    printButton.click();
+    saveButton.click(new SaveCommand(document));
+    printButton.click(new PrintCommand(document));
   }
 }
