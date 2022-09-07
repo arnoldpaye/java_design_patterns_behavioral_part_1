@@ -4,12 +4,10 @@ public class Main {
 
   public static void main(String[] args) {
 
-    String context = "this is a a sentence";
-
-    // Interpret the sentence here
+    String context = "this is a a sentence sentence";
+    NoRepeatedWords noRepeatedWords = new NoRepeatedWords();
+    context = noRepeatedWords.interpret(context);
 
     System.out.println(context);
-
   }
-
 }
