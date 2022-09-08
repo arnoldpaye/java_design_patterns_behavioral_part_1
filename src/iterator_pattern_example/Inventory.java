@@ -14,7 +14,7 @@ public class Inventory implements Iterable {
   }
 
   @Override
-  public Iterator iterator() {
-    return null;
+  public StockIterator iterator() {
+    return new StockIterator(this);
   }
 }
