@@ -1,7 +1,5 @@
 package iterator_pattern_example;
 
-import java.util.Iterator;
-
 public class Inventory implements Iterable {
   private Item[] items;
 
