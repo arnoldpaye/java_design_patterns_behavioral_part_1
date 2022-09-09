@@ -3,13 +3,9 @@ package mediator_pattern_example;
 import java.util.HashMap;
 
 public class ECommerceSite {
-  private Customer customer;
-  private Driver driver;
   private HashMap<String, Integer> stock;
 
-  public ECommerceSite(Customer customer) {
-    this.customer = customer;
-    this.driver = new Driver();
+  public ECommerceSite() {
     stock = new HashMap<>();
     stock.put("pens", 100);
     stock.put("pencils", 50);
@@ -27,7 +23,5 @@ public class ECommerceSite {
   public void sell(String item, int quantity) {
     int newQuantity = stock.get("pens") - quantity;
     stock.put(item, newQuantity);
-
-    driver.deliver(item, quantity, customer);
   }
 }
